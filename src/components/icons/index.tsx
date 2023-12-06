@@ -1,0 +1,5 @@
+export { default as BookmarkEmptyIcon } from './bookmark-empy-icon'
+export { default as BookmarkIcon } from './bookmark-icon'
+export { default as HomeIcon } from './home-icon'
+export { default as MovieIcon } from './movie-icon'
+export { default as TvSeriesIcon } from './series-icon'

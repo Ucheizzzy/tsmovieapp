@@ -1,5 +1,5 @@
-const bookmarks = () => {
-  return <div>bookmarks</div>
+const Bookmarks = () => {
+  return <div>Bookmarks</div>
 }
 
-export default bookmarks
+export default Bookmarks
