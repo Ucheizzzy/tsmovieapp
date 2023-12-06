@@ -1,5 +1,7 @@
+import { HomeLayout } from '.'
+
 const Bookmarks = () => {
-  return <div>Bookmarks</div>
+  return <HomeLayout>Bookmark</HomeLayout>
 }
 
 export default Bookmarks

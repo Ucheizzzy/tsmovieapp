@@ -1,5 +1,7 @@
+import { HomeLayout } from '.'
+
 const Series = () => {
-  return <div>Series</div>
+  return <HomeLayout>Series</HomeLayout>
 }
 
 export default Series

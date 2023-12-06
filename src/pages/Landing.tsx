@@ -1,7 +1,59 @@
+import { SetStateAction, useState } from 'react'
 import { HomeLayout } from '.'
-
+import SearchIcon from '../assets/icons/icon-search.svg'
+import { MovieList, MovieTrendList } from '../components'
+import { MovieDataType } from '../assets/data'
 const Landing = () => {
-  return <HomeLayout>Landing</HomeLayout>
+  const [search, setSearch] = useState<string>('')
+  const [searchList, setSearchList] = useState<MovieDataType[]>([])
+  const trendingList: MovieDataType[] = []
+  const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
+    setSearch(e.target.value)
+  }
+  return (
+    <HomeLayout>
+      <section>
+        <form className='flex items-center rounded-sm p-1 border-non relative'>
+          <input
+            type='text'
+            placeholder='Search for movies or TV series'
+            className='input input-ghost w-full max-w-xs border-none ms-1'
+            value={search}
+            onChange={handleSearch}
+          />
+          <img
+            src={SearchIcon}
+            alt='search icon'
+            className='w-6 h-6 absolute left-0'
+          />
+        </form>
+      </section>
+
+      <section className='py-2 px-2'>
+        {search === '' ? (
+          <div className='w-full'>
+            <div className='w-full'>
+              <h1 className='font-extrabold my-6 tracking-widest uppercase'>
+                Trending
+              </h1>
+              <MovieTrendList trendingList={trendingList} />
+            </div>
+            <div className='w-full'>
+              <h1 className='font-extrabold my-6 tracking-widest uppercase'>
+                Recommended for you
+              </h1>
+              <MovieList />
+            </div>
+          </div>
+        ) : (
+          <div className='w-full'>
+            <h1>Found nos results for this search</h1>
+            <MovieList />
+          </div>
+        )}
+      </section>
+    </HomeLayout>
+  )
 }
 
 export default Landing

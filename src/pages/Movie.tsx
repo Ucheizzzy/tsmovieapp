@@ -1,5 +1,7 @@
+import { HomeLayout } from '.'
+
 const Movie = () => {
-  return <div>Movie</div>
+  return <HomeLayout>Movies</HomeLayout>
 }
 
 export default Movie

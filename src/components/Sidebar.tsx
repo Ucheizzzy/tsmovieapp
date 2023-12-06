@@ -31,7 +31,7 @@ const Sidebar = () => {
   const { pathname } = useLocation()
 
   return (
-    <aside className='p-2 rounded-sm flex sm:flex-row lg:flex-col items-center justify-between sm:w-full lg:w-52'>
+    <aside className='bg-[#161d2f] p-2 rounded-sm flex sm:flex-row lg:flex-col items-center justify-between sm:w-full lg:w-52'>
       <div className='flex sm:flex-row lg:flex-col gap-5 sm:items-center lg:items-start w-full'>
         <h2 className='text-lg font-extrabold  my-2 hidden sm:block'>
           Movie App
