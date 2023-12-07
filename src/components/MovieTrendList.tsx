@@ -1,10 +1,12 @@
 import { MovieDataType } from '../assets/data'
+import { useMovieContext } from '../context/movieContext'
 
 type Props = {
   trendingList: MovieDataType[]
 }
 const MovieTrendList = ({ trendingList }: Props) => {
-  console.log(trendingList)
+  const { state, dispatch } = useMovieContext()
+  console.log(state)
 
   return <div>MovieTrendList</div>
 }

@@ -20,7 +20,7 @@ const reducer = (state: MovieState, action: MovieAction): MovieState => {
       return {
         ...state,
         Movies: state.Movies.map((movie) => {
-          console.log(movie)
+          // console.log(movie)
 
           if (movie.id === action.id)
             return { ...movie, isBookmarked: !movie.isBookmarked }
