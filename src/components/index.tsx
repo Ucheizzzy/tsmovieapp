@@ -1,3 +1,5 @@
 export { default as Sidebar } from './Sidebar'
 export { default as MovieTrendList } from './MovieTrendList'
 export { default as MovieList } from './MovieList'
+export { default as MovieTrendCard } from './MovieTrendCard'
+export { default as MovieCard } from './MovieCard'
