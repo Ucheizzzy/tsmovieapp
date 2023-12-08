@@ -1,14 +1,21 @@
 import { MovieDataType } from '../assets/data'
-import { useMovieContext } from '../context/movieContext'
 
 type Props = {
   trendingList: MovieDataType[]
 }
 const MovieTrendList = ({ trendingList }: Props) => {
-  const { state, dispatch } = useMovieContext()
-  console.log(state)
-
-  return <div>MovieTrendList</div>
+  console.log(trendingList)
+  return (
+    <div className='flex gap-2 overflow-x-scroll'>
+      {trendingList.map((movie) => {
+        return (
+          <div key={movie.id}>
+            <div className='bg-transparent'></div>
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default MovieTrendList

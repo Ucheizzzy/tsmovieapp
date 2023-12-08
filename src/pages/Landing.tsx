@@ -3,10 +3,21 @@ import { HomeLayout } from '.'
 import SearchIcon from '../assets/icons/icon-search.svg'
 import { MovieList, MovieTrendList } from '../components'
 import { MovieDataType } from '../assets/data'
+import { useMovieContext } from '../context/movieContext'
 const Landing = () => {
   const [search, setSearch] = useState<string>('')
   const [searchList, setSearchList] = useState<MovieDataType[]>([])
-  const trendingList: MovieDataType[] = []
+  const {
+    state: { Movies },
+  } = useMovieContext()
+
+
+  const trendingList: MovieDataType[] = Movies.filter(
+    (item) => item.isTrending === true
+  )
+  const recommendedList: MovieDataType[] = Movies.filter(
+    (item) => item.isTrending !== true
+  )
   const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
     setSearch(e.target.value)
   }
@@ -47,7 +58,9 @@ const Landing = () => {
           </div>
         ) : (
           <div className='w-full'>
-            <h1>Found nos results for this search</h1>
+            <h1>
+              Found {searchList.length} results '{search}'{' '}
+            </h1>
             <MovieList />
           </div>
         )}
