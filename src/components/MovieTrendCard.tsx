@@ -14,12 +14,12 @@ const MovieTrendCard = ({ movie }: Props) => {
     dispatch({ type: 'TOGGLE BOOKMARK', id })
   }
   return (
-    <div className='card w-52 bg-neutral text-neutral-content shadow-lg'>
+    <div className='card  bg-neutral text-neutral-content shadow-lg'>
       <div className='card-body p-0 relative flex '>
         <img
           src={movie.thumbnail.regular.large}
           alt={movie.title}
-          className='w-52 rounded-lg'
+          className='w-[400px] rounded-lg'
         />
         <div className='absolute top-0 right-0 bottom-0 left-0 rounded-lg bg-[rgba(0,0,0,0.6)]'></div>
         <div className='mt-6 space-x-0 absolute bottom-0 left-0 right-0 p-4'>

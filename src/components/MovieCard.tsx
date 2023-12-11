@@ -13,7 +13,7 @@ const MovieCard = ({ movie }: Props) => {
     dispatch({ type: 'TOGGLE BOOKMARK', id })
   }
   return (
-    <div className='card bg-transparent my-3 shadow-lg'>
+    <div className='card bg-transparent my-3 shadow-lg '>
       <div className='card-body relative p-0'>
         <div className='gap-2'>
           <img

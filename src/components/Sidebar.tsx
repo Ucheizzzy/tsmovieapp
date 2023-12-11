@@ -3,6 +3,7 @@ import movieIcon from '../assets/icons/icon-nav-movies.svg'
 import tvSeriesIcon from '../assets/icons/icon-nav-tv-series.svg'
 import bookmarkIcon from '../assets/icons/icon-nav-bookmark.svg'
 import { useLocation, Link } from 'react-router-dom'
+import avatar from '../assets/profile-avatar.jpg'
 type linkType = {
   name: string
   icon: string
@@ -32,12 +33,12 @@ const Sidebar = () => {
 
   return (
     <aside className='bg-[#161d2f] p-2 rounded-sm flex sm:flex-row lg:flex-col items-center justify-between sm:w-full lg:w-52'>
-      <div className='flex sm:flex-row lg:flex-col gap-5 sm:items-center lg:items-start w-full'>
+      <div className='flex sm:flex-row lg:flex-col gap-5 items-start w-full'>
         <h2 className='text-lg font-extrabold  my-2 hidden sm:block'>
           Movie App
         </h2>
 
-        <div className='py-4 flex sm:flex-row lg:flex-col gap-4 '>
+        <div className='lg:py-4 sm:p-0 flex sm:flex-row lg:flex-col gap-4 '>
           {navLinks.map((item) => {
             return (
               <Link key={item.name} to={item.link} className='no-underline'>
@@ -61,6 +62,9 @@ const Sidebar = () => {
             )
           })}
         </div>
+      </div>
+      <div className='hidden sm:block p-3'>
+        <img src={avatar} alt='avatar' className='w-20 h-20 rounded-full' />
       </div>
     </aside>
   )

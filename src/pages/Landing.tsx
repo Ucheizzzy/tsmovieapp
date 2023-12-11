@@ -45,7 +45,7 @@ const Landing = () => {
         </form>
       </section>
 
-      <section className='py-2 px-2'>
+      <section className='py-2 px-4'>
         {search === '' ? (
           <div className='w-full'>
             <div className='w-full'>

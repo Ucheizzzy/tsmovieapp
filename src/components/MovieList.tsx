@@ -6,7 +6,7 @@ type Props = {
 }
 
 const MovieList = ({ recommendedList }: Props) => {
-  console.log(recommendedList)
+  // console.log(recommendedList)
   return (
     <div className='grid md:grid-cols-4 gap-x-2'>
       {recommendedList.map((movie) => {
